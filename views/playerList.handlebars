@@ -1,0 +1,12 @@
+<h1>Players Record</h1>
+Currently tracking {{count}} players:
+
+<ul>
+{{#each players}}
+<li><a href="/players/{{key}}">
+            {{#with value}}
+            {{username}}</a></h2>
+            {{/with}}
+</li>
+{{/each}}
+</ul>

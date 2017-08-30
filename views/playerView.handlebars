@@ -1,0 +1,14 @@
+<h1>{{name}}<small> <a href="http://what.thedailywtf.com/users/{{key}}"><i class="glyphicon glyphicon-link"></i></small></a></h1>
+<h3>{{percent}}% win rate ({{wins}}/{{numGames}})</h3>
+<h2>Game Record</h2>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <ul>
+    {{#each games}}
+    {{#with value}}
+        <li>In game <a href="/games/{{game}}">{{name}}</a>, {{../../name}} was {{alignment}} and {{#if won}}won{{else}}lost{{/if}}.</li>
+    {{/with}}
+    {{/each}}
+    </ul>
+    </div>
+</div>

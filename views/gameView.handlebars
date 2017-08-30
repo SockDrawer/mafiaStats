@@ -1,0 +1,51 @@
+<h1>{{name}}<small> <a href="http://what.thedailywtf.com/topic/{{topicId}}"><i class="glyphicon glyphicon-link"></i></small></a></h1> 
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-1">
+        <b>Moderator:</b>
+    </div>
+    <div class="col-md-4">
+        {{collapseList moderators}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-1">
+        <b>Length</b>
+    </div>
+    <div class="col-md-4">
+        {{day}} days
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-1">
+        <b>Winner</b>
+    </div>
+    <div class="col-md-4">
+        {{getWinner values.winner}}
+    </div>
+</div>
+<h2>Players</h2>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <ul>
+    {{#each livePlayers}}
+        <li><a href="/players/{{userslug}}">{{username}}</a> ({{getRole .}}).</li>
+    {{/each}}
+    {{#each deadPlayers}}
+        <li><a href="/players/{{userslug}}">{{username}}</a> ({{getRole .}}).</li>
+    {{/each}}
+    </ul>
+    </div>
+</div>
+
+<h2>Action Record</h2>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <ul>
+    {{#each actions}}
+        <li>On day {{day}}, <a href="/players/{{actor}}">{{actor}}</a> {{makeActionPast action}} {{target}} in post <a href="http://what.thedailywtf.com/post/{{postId}}">{{postId}}</a>.</li>
+    {{/each}}
+    </ul>
+    </div>
+</div>

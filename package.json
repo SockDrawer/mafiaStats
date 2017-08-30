@@ -1,0 +1,24 @@
+{
+  "name": "mafia-stats-browser",
+  "version": "1.0.0",
+  "description": "mafia stats browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SockDrawer/mafiaStats.git"
+  },
+  "author": "yamikuronue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SockDrawer/mafiaStats/issues"
+  },
+  "homepage": "https://github.com/SockDrawer/mafiaStats#readme",
+  "dependencies": {
+    "cradle": "^0.7.1",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0"
+  }
+}
